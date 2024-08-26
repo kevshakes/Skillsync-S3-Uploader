@@ -110,7 +110,7 @@ To allow uploads from your application, configure your S3 bucket with appropriat
             "Access-Control-Allow-Origin"
         ]
     }
-]
+   ]
    ```
 
 You can also set the CORS using the AWS CLI using the following command:
