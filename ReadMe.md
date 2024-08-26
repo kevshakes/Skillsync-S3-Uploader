@@ -94,16 +94,23 @@ To allow uploads from your application, configure your S3 bucket with appropriat
    Go to the AWS S3 console, select your bucket, and add the following CORS configuration:
 
    ```json
-   {
-       "CORSRules": [
-           {
-               "AllowedOrigins": ["*"],
-               "AllowedMethods": ["GET", "PUT", "POST", "DELETE"],
-               "AllowedHeaders": ["*"],
-               "ExposeHeaders": ["ETag"]
-           }
-       ]
-   }
+[
+    {
+        "AllowedHeaders": [
+            "Authorization"
+        ],
+        "AllowedMethods": [
+            "GET",
+            "HEAD"
+        ],
+        "AllowedOrigins": [
+            "*"
+        ],
+        "ExposeHeaders": [
+            "Access-Control-Allow-Origin"
+        ]
+    }
+]
    ```
 
 You can also set the CORS using the AWS CLI using the following command:
